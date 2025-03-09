@@ -1,0 +1,212 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+const plugin = require("tailwindcss/plugin");
+
+module.exports = plugin(function ({ addComponents, addBase, theme }) {
+  addBase({});
+  addComponents({
+    ".heading-h1-bold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.bold"),
+      fontSize: theme("fontSize.8xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h1-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.8xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h1-normal": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.8xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h2-bold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.bold"),
+      fontSize: theme("fontSize.7xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h2-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.7xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h2-normal": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.7xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h3-bold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.bold"),
+      fontSize: theme("fontSize.6xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h3-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.6xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h3-normal": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.6xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h4-bold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.bold"),
+      fontSize: theme("fontSize.4xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h4-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.4xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h4-normal": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.4xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h5-bold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.bold"),
+      fontSize: theme("fontSize.2xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h5-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.2xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h5-normal": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.2xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h6-bold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.bold"),
+      fontSize: theme("fontSize.xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h6-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-h6-normal": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.xl"),
+      lineHeight: "1.2",
+    },
+    ".heading-label-regular": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.sm"),
+      lineHeight: "1.5",
+      textTransform: "uppercase",
+      letterSpacing: theme("letterSpacing.widest"),
+    },
+    ".heading-label-medium": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.medium"),
+      fontSize: theme("fontSize.sm"),
+      lineHeight: "1.5",
+      textTransform: "uppercase",
+      letterSpacing: theme("letterSpacing.widest"),
+    },
+    ".heading-label-semibold": {
+      fontFamily: theme("fontFamily.heading"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.sm"),
+      lineHeight: "1.5",
+      textTransform: "uppercase",
+      letterSpacing: theme("letterSpacing.widest"),
+    },
+    ".paragraph-xs-regular": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.2xs"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-xs-medium": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.medium"),
+      fontSize: theme("fontSize.2xs"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-xs-semibold": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.2xs"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-sm-regular": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.sm"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-sm-medium": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.medium"),
+      fontSize: theme("fontSize.sm"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-sm-semibold": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.sm"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-md-regular": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.base"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-md-medium": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.medium"),
+      fontSize: theme("fontSize.base"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-md-semibold": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.base"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-lg-regular": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.normal"),
+      fontSize: theme("fontSize.xl"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-lg-medium": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.medium"),
+      fontSize: theme("fontSize.xl"),
+      lineHeight: "1.5",
+    },
+    ".paragraph-lg-semibold": {
+      fontFamily: theme("fontFamily.sans"),
+      fontWeight: theme("fontWeight.semibold"),
+      fontSize: theme("fontSize.xl"),
+      lineHeight: "1.5",
+    },
+  });
+});
