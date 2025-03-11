@@ -1,10 +1,3 @@
-import Image from "next/image";
+import { Home } from "@/components/page";
 
-export default function Home() {
-  return (
-    <div>
-      <h1 className="font-heading">Bees Education</h1>
-      <p>Learning ain't a chore, it's a lifestyle!</p>
-    </div>
-  );
-}
+export default Home;

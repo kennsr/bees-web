@@ -3,6 +3,7 @@ import { Poppins  } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { Navbar } from "@/components/global/navbar";
 
 
 export const metadata: Metadata = {
@@ -74,11 +75,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-  <html lang="en" className={`${nohemiFont.variable} ${poppins.variable} light`}>
+  <html lang="en" className={`${nohemiFont.variable} ${poppins.variable} `}>
       <body
         className={`h-full w-full antialiased`}
       >
-      {children}
+        <div className="flex flex-col h-full w-full min-h-screen justify-start ">
+          <div className="h-fit w-full bg-blue-50">
+          <Navbar />
+          </div>
+          <div className="flex flex-1 w-full">
+           {children}
+          </div>
+        </div>
         <Toaster />
       </body>
     </html>
