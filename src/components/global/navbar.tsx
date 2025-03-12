@@ -14,7 +14,11 @@ export const Menubar: FC<IMenuProps> = (props) => {
       <NavigationMenuList>
         {menus.map((menu) => (
           <NavigationMenuItem key={menu.name}>
-            <NavigationMenuLink href={menu.href} className="text-md md:text-lg">
+            <NavigationMenuLink
+              href={menu.href}
+              target={menu.isExternal ? "_blank" : "_self"}
+              className="text-md md:text-lg"
+            >
               {menu.name}
             </NavigationMenuLink>
           </NavigationMenuItem>
