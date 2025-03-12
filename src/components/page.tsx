@@ -18,16 +18,16 @@ export const Home: FC<IHomeProps> = () => {
       {/* HERO SECTION */}
       <main
         id="home"
-        className="relative mb-24 flex h-[50dvh] w-full max-w-screen-xl flex-col items-center justify-center bg-cover bg-center"
+        className="relative mb-24 flex h-[50dvh] w-full max-w-screen-xl flex-col items-center justify-center rounded-xl bg-cover bg-center"
         style={{ backgroundImage: "url('/assets/img/bees-hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[var(--background)]/20"></div>
-        <div className="absolute inset-0 top-[90%] left-1/2 flex h-[100px] w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-xl bg-[var(--foreground)] p-4 shadow-lg">
+        <div className="absolute inset-0 top-[95%] left-1/2 flex h-[100px] w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-xl bg-[var(--foreground)] p-4 shadow-lg">
           <h1 className="relative z-10 text-center text-xl font-bold text-white sm:text-2xl md:text-3xl">
             Bees Education
           </h1>
           <p className="relative z-10 text-center text-sm text-white sm:text-base">
-            Learning ain't a chore, it's a lifestyle!
+            Learning isn&apos;t a chore, it's a lifestyle!
           </p>
         </div>
       </main>
@@ -41,7 +41,7 @@ export const Home: FC<IHomeProps> = () => {
           className="h-[250px] w-full rounded-xl bg-cover bg-center sm:h-[300px] sm:w-1/2"
           style={{ backgroundImage: "url('/assets/img/bees-about.jpeg')" }}
         />
-        <div className="flex w-full flex-col items-start justify-start gap-4 rounded-xl bg-[var(--foreground)] p-4 text-[var(--background)] sm:w-1/2">
+        <div className="flex w-full flex-col items-center justify-start gap-4 rounded-xl bg-[var(--foreground)] p-4 text-center text-[var(--background)] sm:w-1/2">
           <h2 className="text-2xl font-bold sm:text-3xl">About Us</h2>
           <p className="text-sm sm:text-base">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat

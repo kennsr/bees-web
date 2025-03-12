@@ -6,6 +6,8 @@ import { Toaster } from "sonner";
 import "./globals.css";
 import Image from "next/image";
 import { SiteActions } from "@/components/global/site-actions";
+import { Header } from "@/components/global/header";
+import { Background } from "@/components/global/background";
 
 export const metadata: Metadata = {
   title: "Bees Education",
@@ -82,23 +84,9 @@ export default function RootLayout({
       </head>
       <body className={`h-full w-full antialiased`}>
         <div className="flex h-full min-h-screen w-full flex-col justify-start">
-          <div className="relative flex h-[100px] w-full flex-col items-center justify-between overflow-visible px-[20%] pt-[20px]">
-            <div className="flex w-full items-center justify-between">
-              <Image
-                width={100}
-                height={50}
-                className="h-[50px] w-auto"
-                src="/assets/img/bees-logo-full.png"
-                alt="Bees Logo"
-              />
-              <SiteActions />
-            </div>
-
-            {/* SiteActions now overflows downward */}
-            <div className="absolute top-[80%] left-1/2 z-[1] flex h-[50px] w-[80%] -translate-x-1/2 justify-center rounded-xl bg-[var(--foreground)] text-[var(--background)]">
-              <Menubar />
-            </div>
-          </div>
+          <Background />
+          {/* HEADER */}
+          <Header />
           <div className="flex w-full flex-1">{children}</div>
         </div>
         <Toaster />
