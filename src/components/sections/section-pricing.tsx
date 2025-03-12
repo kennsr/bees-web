@@ -1,12 +1,4 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
 import {
   Card,
   CardContent,
@@ -15,6 +7,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { pricings } from "@/constants/menu";
+import { formatCurrency } from "@/utils/format-currency";
+import { useEffect, useState } from "react";
 const PricingSection = () => {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
@@ -61,7 +63,7 @@ const PricingSection = () => {
             }}
           >
             <CarouselContent>
-              {Array.from({ length: 5 }).map((_, index) => (
+              {pricings.map((pricing, index) => (
                 <CarouselItem
                   key={`card-${index}`}
                   className="pl-8 md:basis-1/2 lg:basis-1/3"
@@ -75,9 +77,9 @@ const PricingSection = () => {
                       }`}
                     >
                       <CardHeader>
-                        <CardTitle>Rp350.000,-</CardTitle>
+                        <CardTitle>{formatCurrency(pricing.price)}</CardTitle>
                         <CardDescription className="text-center">
-                          Reguler Class
+                          {pricing.name}
                         </CardDescription>
                       </CardHeader>
                       <CardContent

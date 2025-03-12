@@ -13,13 +13,20 @@ export const Home: FC<IHomeProps> = () => {
         style={{ backgroundImage: "url('/assets/img/bees-hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-[var(--background)]/20"></div>
-        <div className="absolute inset-0 top-[95%] left-1/2 flex h-[100px] w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-xl bg-[var(--foreground)] p-4 shadow-lg">
+        <div className="absolute inset-0 top-[95%] left-1/2 flex h-[140px] w-[90%] max-w-[500px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-xl bg-[var(--foreground)] p-4 shadow-lg">
           <h1 className="relative z-10 text-center text-xl font-bold text-white sm:text-2xl md:text-3xl">
             Bees Education
           </h1>
           <p className="relative z-10 text-center text-sm text-white sm:text-base">
             Learning isn&apos;t a chore, it's a lifestyle!
           </p>
+          <a
+            className="mt-2 rounded-full bg-[var(--background)] px-4 py-1"
+            target="_blank"
+            href="https://drive.google.com/file/d/1Fr2TocdkDfXmRSOvn0B7jPxfYWy7TDXA/view"
+          >
+            See Details
+          </a>
         </div>
       </main>
 
