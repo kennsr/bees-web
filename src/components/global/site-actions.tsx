@@ -1,15 +1,20 @@
 import { FC } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { SearchIcon, Call02Icon } from "@hugeicons/core-free-icons";
+import {
+  SearchIcon,
+  Call02Icon,
+  InstagramIcon,
+  TiktokIcon,
+} from "@hugeicons/core-free-icons";
 interface ISiteActionsProps {}
 
 export const SiteActions: FC<ISiteActionsProps> = (props) => {
   return (
-    <div className="flex w-fit items-center gap-6">
+    <div className="flex w-fit items-center gap-4">
       <a>
         {" "}
         <HugeiconsIcon
-          icon={SearchIcon}
+          icon={InstagramIcon}
           size={24}
           color="currentColor"
           strokeWidth={1.5}
@@ -18,7 +23,7 @@ export const SiteActions: FC<ISiteActionsProps> = (props) => {
       <a>
         {" "}
         <HugeiconsIcon
-          icon={Call02Icon}
+          icon={TiktokIcon}
           size={24}
           color="currentColor"
           strokeWidth={1.5}
