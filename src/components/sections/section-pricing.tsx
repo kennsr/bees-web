@@ -88,10 +88,11 @@ const PricingSection = () => {
                       />
                       <CardFooter className="flex justify-center">
                         <a
-                          href="#"
+                          href="https://forms.gle/DBxMUiGTPJE4XKM79"
+                          target="_blank"
                           className="rounded-full bg-[var(--foreground)] px-4 py-2 text-sm text-[var(--background)] sm:text-base"
                         >
-                          Buy Now
+                          Book Now
                         </a>
                       </CardFooter>
                     </Card>

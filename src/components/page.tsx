@@ -1,13 +1,4 @@
 import { FC } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import PricingSection from "./sections/section-pricing";
 
 interface IHomeProps {}
@@ -44,8 +35,10 @@ export const Home: FC<IHomeProps> = () => {
         <div className="flex w-full flex-col items-center justify-start gap-4 rounded-xl bg-[var(--foreground)] p-4 text-center text-[var(--background)] sm:w-1/2">
           <h2 className="text-2xl font-bold sm:text-3xl">About Us</h2>
           <p className="text-sm sm:text-base">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-            distinctio id accusamus accusantium, qui veniam porro consectetur...
+            Bees is not just a tutoring place, but a fun and exciting learning
+            community! we present a flexible and interactive learning
+            experience. without the limitations of a boring classroom. Learning
+            a new language? Learning a new Sport? Learn it at Bees!
           </p>
         </div>
       </section>
@@ -57,10 +50,11 @@ export const Home: FC<IHomeProps> = () => {
       >
         <div className="flex w-full flex-col items-center justify-start gap-4 rounded-xl bg-[var(--foreground)] p-4 py-8 text-center text-[var(--background)]">
           <h2 className="text-2xl font-bold sm:text-3xl">Advantages</h2>
-          <p className="text-sm sm:text-base">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-            distinctio id accusamus accusantium...
-          </p>
+          <ul>
+            <li>Flexible</li>
+            <li>Interactive</li>
+            <li>Affordable</li>
+          </ul>
         </div>
       </section>
 
