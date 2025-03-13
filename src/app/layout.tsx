@@ -85,7 +85,7 @@ export default function RootLayout({
           <ClientBackground />
           {/* HEADER */}
           <Header />
-          <div className="flex w-full flex-1">{children}</div>
+          <div className="flex w-full flex-1 justify-center">{children}</div>
         </div>
         <Toaster />
       </body>

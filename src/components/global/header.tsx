@@ -5,9 +5,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menubar } from "./navbar";
 import { SiteActions } from "./site-actions";
+import { useRouter } from "next/navigation";
 
 export const Header = () => {
   const [scrolling, setScrolling] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,9 +47,10 @@ export const Header = () => {
           <Image
             width={100}
             height={50}
-            className="h-[50px] w-auto"
+            className="h-[50px] w-auto hover:cursor-pointer"
             src="/assets/img/bees-logo-full.png"
             alt="Bees Logo"
+            onClick={() => router.push("/")}
           />
           <SiteActions />
         </div>
