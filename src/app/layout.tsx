@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import "./globals.css";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Bees Education",
@@ -85,7 +86,9 @@ export default function RootLayout({
           <ClientBackground />
           {/* HEADER */}
           <Header />
-          <div className="flex w-full flex-1 justify-center">{children}</div>
+          <div className="flex w-full flex-1 justify-center">
+            <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
+          </div>
         </div>
         <Toaster />
       </body>
