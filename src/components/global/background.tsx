@@ -1,10 +1,8 @@
 "use client";
-import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-interface IBackgroundProps {}
-
-export const Background: FC<IBackgroundProps> = (props) => {
+export const Background = () => {
   const [hexagons, setHexagons] = useState<
     Array<{ id: number; x: number; y: number; size: number; delay: number }>
   >([]);

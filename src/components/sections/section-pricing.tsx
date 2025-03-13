@@ -20,26 +20,22 @@ import { useEffect, useState } from "react";
 const PricingSection = () => {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!api) {
       return;
     }
 
-    // @ts-ignore
-    setCount(api.scrollSnapList().length);
-
     const handleSelect = () => {
-      // @ts-ignore
+      // @ts-expect-error typing
       setCurrent(api.selectedScrollSnap());
     };
 
-    // @ts-ignore
+    // @ts-expect-error typing
     api.on("select", handleSelect);
 
     return () => {
-      // @ts-ignore
+      // @ts-expect-error typing
       api.off("select", handleSelect);
     };
   }, [api]);

@@ -5,10 +5,8 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { menus } from "@/constants/menu";
-import { FC } from "react";
-interface IMenuProps {}
 
-export const Menubar: FC<IMenuProps> = (props) => {
+export const Menubar = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>

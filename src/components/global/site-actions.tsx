@@ -1,24 +1,18 @@
 "use client";
-import { FC, Suspense } from "react";
+import { InstagramIcon, TiktokIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  SearchIcon,
-  Call02Icon,
-  InstagramIcon,
-  TiktokIcon,
-} from "@hugeicons/core-free-icons";
+  Tooltip,
+  TooltipArrow,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@radix-ui/react-tooltip";
 import { Sparkles } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-  TooltipArrow,
-} from "@radix-ui/react-tooltip";
-interface ISiteActionsProps {}
+import { Suspense } from "react";
 
-export const SiteActions: FC<ISiteActionsProps> = (props) => {
+export const SiteActions = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const isSparkles = searchParams.get("nofx") !== "1";

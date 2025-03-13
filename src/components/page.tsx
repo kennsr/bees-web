@@ -1,9 +1,6 @@
-import { FC } from "react";
 import PricingSection from "./sections/section-pricing";
 
-interface IHomeProps {}
-
-export const Home: FC<IHomeProps> = () => {
+export const Home = () => {
   return (
     <div className="flex h-full min-h-[100dvh] w-full flex-col items-center justify-start gap-12 px-4 sm:px-8 md:px-12">
       {/* HERO SECTION */}
@@ -18,7 +15,7 @@ export const Home: FC<IHomeProps> = () => {
             Bees Education
           </h1>
           <p className="relative z-10 text-center text-sm text-white sm:text-base">
-            Learning isn&apos;t a chore, it's a lifestyle!
+            Learning isn&apos;t a chore, it&apos;s a lifestyle!
           </p>
           <a
             className="mt-2 rounded-full bg-[var(--background)] px-4 py-1"

@@ -1,13 +1,12 @@
 "use client";
-import Image from "next/image";
-import { FC, useEffect, useState } from "react";
-import { SiteActions } from "./site-actions";
-import { Menubar } from "./navbar";
-import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-interface IHeaderProps {}
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { Menubar } from "./navbar";
+import { SiteActions } from "./site-actions";
 
-export const Header: FC<IHeaderProps> = (props) => {
+export const Header = () => {
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
