@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import "./globals.css";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Bees Education",
@@ -81,10 +82,12 @@ export default function RootLayout({
       </head>
       <body className={`h-full w-full antialiased`}>
         <div className="flex h-full min-h-screen w-full flex-col justify-start">
-          {/* Use a client component to handle the query parameter check */}
-          <ClientBackground />
-          {/* HEADER */}
-          <Header />
+          <Suspense fallback={<div>Loading...</div>}>
+            {/* Use a client component to handle the query parameter check */}
+            <ClientBackground />
+            {/* HEADER */}
+            <Header />
+          </Suspense>
           <div className="flex w-full flex-1 justify-center">{children}</div>
         </div>
         <Toaster />
