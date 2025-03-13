@@ -42,7 +42,7 @@ export const Header: FC<IHeaderProps> = (props) => {
         animate={scrolling ? "hidden" : "visible"}
         className="overflow-hidden bg-[var(--background)] shadow-lg shadow-black/5"
       >
-        <div className="flex w-full items-center justify-between px-20 py-3">
+        <div className="flex w-full items-center justify-between px-10 py-3 md:px-20">
           <Image
             width={100}
             height={50}

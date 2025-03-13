@@ -1,13 +1,10 @@
-import { Menubar } from "@/components/global/navbar";
+import { ClientBackground } from "@/components/global/client-background";
+import { Header } from "@/components/global/header";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Toaster } from "sonner";
 import "./globals.css";
-import Image from "next/image";
-import { SiteActions } from "@/components/global/site-actions";
-import { Header } from "@/components/global/header";
-import { Background } from "@/components/global/background";
 
 export const metadata: Metadata = {
   title: "Bees Education",
@@ -84,7 +81,8 @@ export default function RootLayout({
       </head>
       <body className={`h-full w-full antialiased`}>
         <div className="flex h-full min-h-screen w-full flex-col justify-start">
-          <Background />
+          {/* Use a client component to handle the query parameter check */}
+          <ClientBackground />
           {/* HEADER */}
           <Header />
           <div className="flex w-full flex-1">{children}</div>
