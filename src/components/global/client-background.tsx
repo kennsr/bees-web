@@ -8,9 +8,5 @@ export function ClientBackground() {
   const searchParams = useSearchParams();
   const shouldShowBackground = searchParams.get("nofx") !== "1";
 
-  return shouldShowBackground ? (
-    <Suspense>
-      <Background />
-    </Suspense>
-  ) : null;
+  return <Suspense>{shouldShowBackground ? <Background /> : null}</Suspense>;
 }
