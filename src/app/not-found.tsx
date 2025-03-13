@@ -8,12 +8,12 @@ export default function NotFound() {
     <div className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
       <h1 className="mb-4 text-4xl font-bold">404 - Page Not Found</h1>
       <p className="mb-6">
-        The page you're looking for doesn't exist or has been moved.
+        The page you&apos;re looking for doesn&apos;t exist or has been moved.
       </p>
       <Suspense fallback={<div>Loading...</div>}>
         <Link
           href="/"
-          className="rounded bg-[var(--foreground)] px-4 py-2 text-[var(--background)] hover:[var(--foreground)/10]"
+          className="hover:[var(--foreground)/10] rounded bg-[var(--foreground)] px-4 py-2 text-[var(--background)]"
         >
           Return to Home
         </Link>
