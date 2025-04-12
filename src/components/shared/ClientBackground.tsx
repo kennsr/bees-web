@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Background } from "./background";
+import { Background } from "./Background";
 
 export function ClientBackground() {
   const searchParams = useSearchParams();

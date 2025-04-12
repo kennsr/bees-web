@@ -4,7 +4,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { menus } from "@/constants/menu";
+import { menus } from "@/constants/menu.const";
 
 export const Menubar = () => {
   return (

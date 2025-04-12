@@ -1,4 +1,4 @@
-import PricingSection from "./sections/section-pricing";
+import ClassSection from "./sections/SectionClasses";
 
 export const Home = () => {
   return (
@@ -62,8 +62,8 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* PRICING SECTION */}
-      <PricingSection />
+      {/* CLASS SECTION */}
+      <ClassSection />
     </div>
   );
 };

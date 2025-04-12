@@ -1,5 +1,5 @@
-import { ClientBackground } from "@/components/global/client-background";
-import { Header } from "@/components/global/header";
+import { ClientBackground } from "@/components/shared/ClientBackground";
+import { Header } from "@/components/shared/Header";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";

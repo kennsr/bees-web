@@ -14,10 +14,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { pricings } from "@/constants/menu";
+import { classes } from "@/constants/class.const";
 import { formatCurrency } from "@/utils/format-currency";
 import { useEffect, useState } from "react";
-const PricingSection = () => {
+const ClassSection = () => {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
 
@@ -43,10 +43,12 @@ const PricingSection = () => {
   return (
     <section
       className="mb-8 flex w-full max-w-screen-xl flex-wrap items-center justify-center gap-6 px-4 sm:gap-12 sm:px-8"
-      id="pricing"
+      id="class"
     >
       <div className="flex w-full flex-col items-center justify-start gap-8 text-center">
-        <h2 className="text-2xl font-bold sm:text-3xl">Pricing</h2>
+        <h2 className="text-2xl font-bold sm:text-3xl">
+          What Classes are there?
+        </h2>
 
         <div className="w-full max-w-4xl">
           <Carousel
@@ -59,7 +61,7 @@ const PricingSection = () => {
             }}
           >
             <CarouselContent>
-              {pricings.map((pricing, index) => (
+              {classes.map((classItem, index) => (
                 <CarouselItem
                   key={`card-${index}`}
                   className="pl-8 md:basis-1/2 lg:basis-1/3"
@@ -73,9 +75,27 @@ const PricingSection = () => {
                       }`}
                     >
                       <CardHeader>
-                        <CardTitle>{formatCurrency(pricing.price)}</CardTitle>
-                        <CardDescription className="text-center">
-                          {pricing.name}
+                        <CardTitle className="flex flex-col items-center justify-center space-y-1 md:items-center">
+                          {classItem.price.promo ? (
+                            <div className="flex flex-col items-center justify-center space-y-1 md:items-center">
+                              <span className="bg-red text-lg font-bold text-gray-400 line-through">
+                                {formatCurrency(classItem.price.base)}
+                              </span>
+                              <span className="text-xl font-bold text-[var(--foreground)]">
+                                {formatCurrency(classItem.price.promo)}
+                              </span>
+                              <span className="text-xs font-medium text-gray-500">
+                                Limited time offer
+                              </span>
+                            </div>
+                          ) : (
+                            <span className="text-xl font-bold text-[var(--foreground)]">
+                              {formatCurrency(classItem.price.base)}
+                            </span>
+                          )}
+                        </CardTitle>
+                        <CardDescription className="text-md text-center text-[var(--foreground)]">
+                          {classItem.name}
                         </CardDescription>
                       </CardHeader>
                       <CardContent
@@ -107,4 +127,4 @@ const PricingSection = () => {
   );
 };
 
-export default PricingSection;
+export default ClassSection;

@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menubar } from "./navbar";
-import { SiteActions } from "./site-actions";
+import { Menubar } from "./Navbar";
+import { SiteActions } from "./SiteActions";
 import { useRouter } from "next/navigation";
 
 export const Header = () => {

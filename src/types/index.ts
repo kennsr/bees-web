@@ -4,7 +4,13 @@ export type MenuItem = {
   isExternal?: boolean;
 };
 
-export type PricingItem = {
+export type ClassItem = {
   name: string;
-  price: number;
+  price: {
+    base: number;
+    promo: number | undefined;
+  };
+  description: string;
+  benefits: string[];
+  footer: string;
 };
