@@ -3,8 +3,11 @@ import { REGISTRATION_FORM_LINK } from "@/constants/links.const";
 import { formatCurrency } from "@/utils/format-currency";
 import { CheckCircle } from "lucide-react";
 
+// For Next.js Pages Router
 interface ClassDetailProps {
-  params: { classId?: string };
+  params: {
+    classId: string;
+  };
 }
 
 async function ClassDetail({ params }: ClassDetailProps) {
