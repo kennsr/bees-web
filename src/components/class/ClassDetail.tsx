@@ -40,7 +40,7 @@ async function ClassDetail({ params }: ClassDetailProps) {
           {/* Price section */}
           <div className="mb-6">
             {classData.price.promo ? (
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col items-start gap-3 md:flex-row">
                 <span className="text-2xl font-bold text-[var(--foreground)] dark:text-[var(--foreground)]">
                   {formatCurrency(classData.price.promo)}
                 </span>
