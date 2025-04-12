@@ -5,13 +5,13 @@ import { CheckCircle } from "lucide-react";
 
 // For Next.js Pages Router
 interface ClassDetailProps {
-  params: {
+  params: Promise<{
     classId: string;
-  };
+  }>;
 }
 
 async function ClassDetail({ params }: ClassDetailProps) {
-  const { classId } = params;
+  const { classId } = await params;
   const classData = classes.find((classItem) => classItem.id === classId);
 
   if (!classData) {
