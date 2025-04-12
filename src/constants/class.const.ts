@@ -2,6 +2,7 @@ import { ClassItem } from "@/types";
 
 export const classes: ClassItem[] = [
   {
+    id: "online-regular",
     name: "Online Regular Class",
     price: {
       base: 250000,
@@ -23,6 +24,7 @@ export const classes: ClassItem[] = [
       "✨ Kelas ini cocok untuk kamu yang ingin belajar secara fleksibel, memperluas relasi, dan tetap produktif meski dari rumah.",
   },
   {
+    id: "online-private",
     name: "Online Private Class",
     price: {
       base: 500000,
@@ -43,6 +45,7 @@ export const classes: ClassItem[] = [
       "✨ Kelas ini cocok untuk kamu yang ingin belajar secara intensif, fokus, dan nyaman dengan pendampingan langsung dari tutor pribadi.",
   },
   {
+    id: "offline-private",
     name: "Offline Private Class",
     price: {
       base: 700000,
@@ -64,6 +67,7 @@ export const classes: ClassItem[] = [
       "✨ Kelas ini cocok untuk kamu yang ingin belajar dengan praktik langsung, menyukai suasana tatap muka, dan ingin pengalaman belajar yang lebih personal dan nyata.",
   },
   {
+    id: "offline-regular",
     name: "Offline Regular Class",
     price: {
       base: 550000,

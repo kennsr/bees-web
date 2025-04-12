@@ -5,6 +5,7 @@ export type MenuItem = {
 };
 
 export type ClassItem = {
+  id: string;
   name: string;
   price: {
     base: number;

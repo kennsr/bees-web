@@ -88,7 +88,9 @@ export default function RootLayout({
             {/* HEADER */}
             <Header />
           </Suspense>
-          <div className="flex w-full flex-1 justify-center">{children}</div>
+          <div className="flex w-full flex-1 justify-center pt-16">
+            {children}
+          </div>
         </div>
         <Toaster />
       </body>

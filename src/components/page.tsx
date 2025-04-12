@@ -1,3 +1,4 @@
+import { DETAIL_PDF_LINK } from "@/constants/links.const";
 import ClassSection from "./sections/SectionClasses";
 
 export const Home = () => {
@@ -20,7 +21,7 @@ export const Home = () => {
           <a
             className="mt-2 rounded-full bg-[var(--background)] px-4 py-1"
             target="_blank"
-            href="https://drive.google.com/file/d/1Fr2TocdkDfXmRSOvn0B7jPxfYWy7TDXA/view"
+            href={DETAIL_PDF_LINK}
           >
             See Details
           </a>

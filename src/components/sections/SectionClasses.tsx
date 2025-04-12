@@ -16,10 +16,12 @@ import {
 } from "@/components/ui/carousel";
 import { classes } from "@/constants/class.const";
 import { formatCurrency } from "@/utils/format-currency";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 const ClassSection = () => {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     if (!api) {
@@ -39,6 +41,10 @@ const ClassSection = () => {
       api.off("select", handleSelect);
     };
   }, [api]);
+
+  const onClassOpen = (classId: string) => {
+    router.push(`/class/${classId}`);
+  };
 
   return (
     <section
@@ -68,7 +74,8 @@ const ClassSection = () => {
                 >
                   <div className="relative py-6">
                     <Card
-                      className={`flex h-full flex-col justify-between border transition-all duration-300 ${
+                      onClick={() => onClassOpen(classItem.id)}
+                      className={`flex h-full cursor-pointer flex-col justify-between border transition-all duration-300 ${
                         current === index
                           ? "z-10 scale-110 shadow-lg"
                           : "scale-100 opacity-75"
