@@ -108,7 +108,7 @@ const ClassSection = () => {
                       <CardContent
                         className="h-[200px] bg-cover bg-center text-center"
                         style={{
-                          backgroundImage: "url('/assets/img/bees-about.jpeg')",
+                          backgroundImage: `url('${classItem.image}')`,
                         }}
                       />
                       <CardFooter className="flex justify-center">

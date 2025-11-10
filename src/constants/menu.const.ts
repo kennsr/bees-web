@@ -3,7 +3,7 @@ import { MenuItem } from "@/types";
 export const menus: MenuItem[] = [
   {
     name: "Home",
-    href: "#",
+    href: "/",
     isExternal: false,
   },
   {

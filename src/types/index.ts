@@ -14,4 +14,5 @@ export type ClassItem = {
   description: string;
   benefits: string[];
   footer: string;
+  image: string;
 };
