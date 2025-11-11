@@ -14,45 +14,64 @@ export const Home = () => {
       {/* HERO SECTION */}
       <main
         id="home"
-        className="relative mb-24 flex h-[60dvh] w-full max-w-screen-xl flex-col items-center justify-center overflow-hidden rounded-2xl bg-cover bg-center"
-        style={{ backgroundImage: "url('/assets/img/bees-hero.jpg')" }}
+        className="relative mb-24 flex h-[60dvh] w-full max-w-screen-xl flex-col items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-[#fed63c] via-[#ffd700] to-[#fed63c]"
       >
-        {/* Dynamic overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#fed63c]/30 via-[#2259a2]/20 to-[var(--foreground)]/40"></div>
-
-        {/* Bold text overlay - Instagram style */}
-        <div className="relative z-10 px-6 text-center">
-          <h1 className="mb-4 -rotate-2 transform text-4xl font-black text-white drop-shadow-2xl sm:text-6xl md:text-7xl">
-            BEES
-            <span className="block rotate-1 transform text-[#fed63c]">
+        {/* Decorative background patterns */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 h-32 w-32 animate-pulse rounded-full bg-[#2259a2]/20"></div>
+          <div className="absolute top-20 right-20 h-24 w-24 animate-bounce rounded-full bg-[var(--foreground)]/20"></div>
+          <div className="absolute bottom-20 left-20 h-28 w-28 rounded-full bg-white/30"></div>
+          <div className="absolute right-10 bottom-10 h-20 w-20 animate-pulse rounded-full bg-[#2259a2]/30"></div>
+          <div className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10"></div>
+        </div>
+        {/* Bold text - Instagram style with perfect visibility */}
+        {/* Bold text - Instagram style with perfect visibility */}
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+          <h1 className="mb-6 -rotate-2 transform text-4xl font-black text-gray-800 drop-shadow-lg sm:text-6xl md:text-7xl lg:text-8xl">
+            <span className="text-[var(--foreground)]">BEES</span>
+            <span className="mt-2 block rotate-1 transform text-[#2259a2]">
               EDUCATION
             </span>
           </h1>
-          <div className="rotate-1 transform rounded-2xl bg-white/90 p-4 shadow-2xl backdrop-blur-sm">
-            <p className="text-lg font-bold text-gray-800 sm:text-xl">
+
+          <div className="mx-auto mb-6 max-w-xs rotate-1 transform rounded-2xl border-4 border-gray-800 bg-white/95 p-4 shadow-2xl backdrop-blur-sm sm:mb-8 sm:max-w-2xl sm:p-6">
+            <p className="text-lg font-black text-gray-800 sm:text-xl md:text-2xl">
               Learning isn&apos;t a chore,
-              <span className="text-[var(--foreground)]">
-                {" "}
-                it&apos;s a lifestyle!
+              <span className="mt-1 block text-[var(--foreground)]">
+                it&apos;s a LIFESTYLE!
               </span>
             </p>
+            <div className="mt-3 flex flex-wrap justify-center gap-2 sm:mt-4 sm:gap-3">
+              <span className="rounded-full bg-[#2259a2] px-3 py-1 text-xs font-bold text-white sm:px-4 sm:py-2 sm:text-sm">
+                ✨ FUN
+              </span>
+              <span className="rounded-full bg-[var(--foreground)] px-3 py-1 text-xs font-bold text-white sm:px-4 sm:py-2 sm:text-sm">
+                🚀 EFFECTIVE
+              </span>
+              <span className="rounded-full bg-gray-800 px-3 py-1 text-xs font-bold text-white sm:px-4 sm:py-2 sm:text-sm">
+                💪 FLEXIBLE
+              </span>
+            </div>
+          </div>
+
+          {/* CTA Button - Responsive positioning */}
+          <div className="mt-4">
+            <a
+              className="inline-block transform rounded-2xl border-4 border-gray-800 bg-[var(--foreground)] px-6 py-3 text-lg font-black text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:rotate-1 sm:px-10 sm:py-4 sm:text-xl"
+              target="_blank"
+              href={DETAIL_PDF_LINK}
+            >
+              GET READY! 🚀
+            </a>
           </div>
         </div>
-
-        {/* CTA Button - Instagram style */}
-        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 transform">
-          <a
-            className="transform rounded-full border-4 border-white bg-[var(--foreground)] px-8 py-3 text-lg font-bold text-white shadow-2xl transition-all duration-300 hover:scale-105"
-            target="_blank"
-            href={DETAIL_PDF_LINK}
-          >
-            GET READY! 🚀
-          </a>
+        {/* Enhanced decorative elements */}
+        <div className="absolute top-6 right-6 flex h-16 w-16 animate-pulse items-center justify-center rounded-full bg-[#2259a2] text-2xl opacity-80">
+          🐝
         </div>
-
-        {/* Decorative elements */}
-        <div className="absolute top-4 right-4 h-20 w-20 animate-pulse rounded-full bg-[#fed63c] opacity-80"></div>
-        <div className="absolute bottom-4 left-4 h-12 w-12 animate-bounce rounded-full bg-[#2259a2] opacity-60"></div>
+        <div className="absolute bottom-6 left-6 flex h-12 w-12 animate-bounce items-center justify-center rounded-full bg-[var(--foreground)] text-lg opacity-80">
+          📚
+        </div>
       </main>
 
       {/* ABOUT SECTION */}
@@ -71,57 +90,104 @@ export const Home = () => {
           <div className="mx-auto h-2 w-32 rotate-1 transform rounded-full bg-gradient-to-r from-[var(--foreground)] via-[#fed63c] to-[#2259a2]"></div>
         </div>
 
-        <div className="flex w-full flex-wrap items-stretch justify-center gap-8">
-          {/* Image Card */}
-          <div className="group w-full sm:w-[45%] lg:w-[40%]">
-            <Card className="h-full overflow-hidden border-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <div
-                className="h-[300px] w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
-                style={{
-                  backgroundImage: "url('/assets/img/bees-about.jpeg')",
-                }}
-              />
-            </Card>
-          </div>
+        <div className="mx-auto w-full max-w-4xl">
+          {/* Enhanced Content Card - Instagram Style */}
+          <Card className="hover:shadow-3xl relative -rotate-1 transform overflow-hidden border-4 border-white bg-gradient-to-br from-[var(--foreground)] via-[#ff8533] to-[var(--foreground)] text-white shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:rotate-0">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full bg-[#fed63c]/20"></div>
+            <div className="absolute bottom-0 left-0 h-24 w-24 -translate-x-12 translate-y-12 rounded-full bg-[#2259a2]/20"></div>
+            <div className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5"></div>
 
-          {/* Content Card */}
-          <div className="w-full sm:w-[45%] lg:w-[40%]">
-            <Card className="h-full border-2 bg-gradient-to-br from-[var(--foreground)] to-[var(--foreground)]/80 text-[var(--background)] transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl sm:text-3xl">
-                  🐝 Learning Community
-                </CardTitle>
-                <CardDescription className="text-[var(--background)]/80">
-                  Where education meets excitement
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-sm leading-relaxed sm:text-base">
-                  Bees is not just a tutoring place, but a{" "}
-                  <span className="font-semibold">
-                    fun and exciting learning community!
-                  </span>{" "}
-                  We present a flexible and interactive learning experience
-                  without the limitations of a boring classroom.
-                </p>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">🌍</span>
-                    <span className="text-sm">Learning a new language?</span>
+            <CardContent className="relative z-10 p-8 md:p-12">
+              <div className="mb-8 text-center">
+                <h3 className="mb-4 rotate-1 transform text-4xl font-black md:text-5xl">
+                  🐝 <span className="text-[#fed63c]">LEARNING</span>
+                  <span className="mt-2 block -rotate-2 transform">
+                    COMMUNITY
+                  </span>
+                </h3>
+                <div className="inline-block rotate-1 transform rounded-2xl bg-white/20 px-6 py-3 backdrop-blur-sm">
+                  <p className="text-lg font-bold text-white/95 md:text-xl">
+                    Where education meets excitement!
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid items-center gap-8 md:grid-cols-2">
+                {/* Main Content */}
+                <div className="space-y-6">
+                  <div className="-rotate-1 transform rounded-2xl bg-white/15 p-6 backdrop-blur-sm">
+                    <p className="text-lg leading-relaxed font-medium">
+                      Bees is not just a tutoring place, but a{" "}
+                      <span className="text-xl font-black text-[#fed63c]">
+                        fun and exciting learning community!
+                      </span>
+                    </p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">⚽</span>
-                    <span className="text-sm">Learning a new sport?</span>
-                  </div>
-                  <div className="mt-3 text-center">
-                    <span className="rounded-full bg-[var(--background)] px-4 py-2 text-sm font-semibold text-[var(--foreground)]">
-                      Learn it at Bees! 🎯
-                    </span>
+
+                  <div className="rotate-1 transform rounded-2xl bg-white/10 p-6 backdrop-blur-sm">
+                    <p className="text-base leading-relaxed">
+                      We present a{" "}
+                      <span className="font-bold text-[#fed63c]">
+                        flexible and interactive
+                      </span>{" "}
+                      learning experience without the limitations of a boring
+                      classroom.
+                    </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+
+                {/* Interactive Elements */}
+                <div className="space-y-4">
+                  <div className="flex rotate-1 transform items-center gap-4 rounded-2xl bg-white/15 p-4 backdrop-blur-sm transition-transform duration-300 hover:rotate-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fed63c] text-2xl">
+                      🌍
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold">New Language?</h4>
+                      <p className="text-sm opacity-90">
+                        Master English with confidence
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex -rotate-1 transform items-center gap-4 rounded-2xl bg-white/15 p-4 backdrop-blur-sm transition-transform duration-300 hover:rotate-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#2259a2] text-2xl">
+                      🎯
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold">Test Prep?</h4>
+                      <p className="text-sm opacity-90">
+                        TOEFL & IELTS excellence
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex rotate-1 transform items-center gap-4 rounded-2xl bg-white/15 p-4 backdrop-blur-sm transition-transform duration-300 hover:rotate-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fed63c] text-2xl">
+                      ⚡
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold">Quick Learning?</h4>
+                      <p className="text-sm opacity-90">
+                        Accelerated programs available
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Call to Action */}
+              <div className="mt-10 text-center">
+                <div className="inline-block -rotate-2 transform rounded-2xl bg-[#fed63c] px-8 py-4 text-xl font-black text-gray-800 shadow-2xl transition-all duration-300 hover:scale-105 hover:rotate-0">
+                  Learn it at BEES! 🚀
+                </div>
+                <p className="mt-4 font-medium text-white/80">
+                  Join our buzzing community of learners today!
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
